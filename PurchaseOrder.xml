@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <template encoding-version="1.0">
   <description></description>
-  <groupId>67ed48c5-0157-1000-8158-1ced1db8247c</groupId>
+  <groupId>26df8493-0158-1000-303b-500b667044e7</groupId>
   <name>PurchaseOrder</name>
   <snippet>
     <processGroups>
@@ -35,21 +35,15 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                   <entry>
-                    <key>Log prefix</key>
-                    <value>
-                      <name>Log prefix</name>
-                    </value>
-                  </entry>
-                  <entry>
                     <key>Log Level</key>
                     <value>
                       <name>Log Level</name>
                     </value>
                   </entry>
                   <entry>
-                    <key>Attributes to Ignore</key>
+                    <key>Log Payload</key>
                     <value>
-                      <name>Attributes to Ignore</name>
+                      <name>Log Payload</name>
                     </value>
                   </entry>
                   <entry>
@@ -59,9 +53,15 @@
                     </value>
                   </entry>
                   <entry>
-                    <key>Log Payload</key>
+                    <key>Attributes to Ignore</key>
                     <value>
-                      <name>Log Payload</name>
+                      <name>Attributes to Ignore</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Log prefix</key>
+                    <value>
+                      <name>Log prefix</name>
                     </value>
                   </entry>
                 </descriptors>
@@ -69,21 +69,21 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                   <entry>
-                    <key>Log prefix</key>
-                  </entry>
-                  <entry>
                     <key>Log Level</key>
                     <value>info</value>
                   </entry>
                   <entry>
-                    <key>Attributes to Ignore</key>
+                    <key>Log Payload</key>
+                    <value>false</value>
                   </entry>
                   <entry>
                     <key>Attributes to Log</key>
                   </entry>
                   <entry>
-                    <key>Log Payload</key>
-                    <value>false</value>
+                    <key>Attributes to Ignore</key>
+                  </entry>
+                  <entry>
+                    <key>Log prefix</key>
                   </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -110,12 +110,82 @@
             <y>85.0</y>
           </position>
           <comments></comments>
-          <contents></contents>
+          <contents>
+            <processors>
+              <id>501f25c9-0158-1000-0000-000000000000</id>
+              <parentGroupId>4fbe539f-0158-1000-0000-000000000000</parentGroupId>
+              <position>
+                <x>176.0</x>
+                <y>-38.0</y>
+              </position>
+              <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                  <entry>
+                    <key>File Size</key>
+                    <value>
+                      <name>File Size</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Batch Size</key>
+                    <value>
+                      <name>Batch Size</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Data Format</key>
+                    <value>
+                      <name>Data Format</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Unique FlowFiles</key>
+                    <value>
+                      <name>Unique FlowFiles</name>
+                    </value>
+                  </entry>
+                </descriptors>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                  <entry>
+                    <key>File Size</key>
+                  </entry>
+                  <entry>
+                    <key>Batch Size</key>
+                    <value>1</value>
+                  </entry>
+                  <entry>
+                    <key>Data Format</key>
+                    <value>Binary</value>
+                  </entry>
+                  <entry>
+                    <key>Unique FlowFiles</key>
+                    <value>false</value>
+                  </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+              </config>
+              <name>GenerateEDI820_FlowFile</name>
+              <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+              </relationships>
+              <style></style>
+              <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+            </processors>
+          </contents>
           <name>EDI_820</name>
         </processGroups>
       </contents>
       <name>Purchase Order</name>
     </processGroups>
   </snippet>
-  <timestamp>11/10/2016 11:55:02 PST</timestamp>
+  <timestamp>11/10/2016 13:26:35 PST</timestamp>
 </template>
