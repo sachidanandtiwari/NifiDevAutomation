@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description></description>
+  <groupId>67ed48c5-0157-1000-8158-1ced1db8247c</groupId>
+  <name>PurchaseOrder</name>
+  <snippet>
+    <processGroups>
+      <id>4fbdf266-0158-1000-0000-000000000000</id>
+      <parentGroupId>26df8493-0158-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <comments></comments>
+      <contents>
+        <processGroups>
+          <id>4fbe2681-0158-1000-0000-000000000000</id>
+          <parentGroupId>4fbdf266-0158-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>288.0</x>
+            <y>88.0</y>
+          </position>
+          <comments></comments>
+          <contents>
+            <processors>
+              <id>4fc0e174-0158-1000-0000-000000000000</id>
+              <parentGroupId>4fbe2681-0158-1000-0000-000000000000</parentGroupId>
+              <position>
+                <x>368.0</x>
+                <y>120.0</y>
+              </position>
+              <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                  <entry>
+                    <key>Log prefix</key>
+                    <value>
+                      <name>Log prefix</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Log Level</key>
+                    <value>
+                      <name>Log Level</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Attributes to Ignore</key>
+                    <value>
+                      <name>Attributes to Ignore</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Attributes to Log</key>
+                    <value>
+                      <name>Attributes to Log</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Log Payload</key>
+                    <value>
+                      <name>Log Payload</name>
+                    </value>
+                  </entry>
+                </descriptors>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                  <entry>
+                    <key>Log prefix</key>
+                  </entry>
+                  <entry>
+                    <key>Log Level</key>
+                    <value>info</value>
+                  </entry>
+                  <entry>
+                    <key>Attributes to Ignore</key>
+                  </entry>
+                  <entry>
+                    <key>Attributes to Log</key>
+                  </entry>
+                  <entry>
+                    <key>Log Payload</key>
+                    <value>false</value>
+                  </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+              </config>
+              <name>LogAttribute_EDI810</name>
+              <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+              </relationships>
+              <style></style>
+              <type>org.apache.nifi.processors.standard.LogAttribute</type>
+            </processors>
+          </contents>
+          <name>EDI_810</name>
+        </processGroups>
+        <processGroups>
+          <id>4fbe539f-0158-1000-0000-000000000000</id>
+          <parentGroupId>4fbdf266-0158-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>786.0</x>
+            <y>85.0</y>
+          </position>
+          <comments></comments>
+          <contents></contents>
+          <name>EDI_820</name>
+        </processGroups>
+      </contents>
+      <name>Purchase Order</name>
+    </processGroups>
+  </snippet>
+  <timestamp>11/10/2016 11:55:02 PST</timestamp>
+</template>
